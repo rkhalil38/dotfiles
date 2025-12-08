@@ -1,0 +1,51 @@
+{
+"include": [
+  "$HOME/.config/waybar/Modules",
+  "$HOME/.config/waybar/ModulesWorkspaces",
+  "$HOME/.config/waybar/ModulesCustom",
+  "$HOME/.config/waybar/ModulesGroups",
+  "$HOME/.config/waybar/UserModules",
+  ],
+"layer": "top",
+//"mode": "dock",
+"exclusive": true,
+"passthrough": false,
+"position": "top",
+"spacing": 3,
+"fixed-center": true,
+"ipc": true,
+"margin-top": 12,
+"margin-left": 8,
+"margin-right": 8,
+
+"modules-left": [
+    "custom/fedoricon",
+	"hyprland/window",
+    "custom/cava_mviz",
+	],
+
+"modules-center": [
+	"group/app_drawer",
+	"custom/separator#line",
+	"hyprland/workspaces#rw",
+	"clock",
+	"custom/separator#line",
+	"idle_inhibitor",	
+	"custom/separator#line",
+    "custom/swaync"
+	],
+
+"modules-right": [
+    "network",
+	"custom/separator#line",  
+    "bluetooth",
+	"custom/separator#line",  
+	"cpu",
+	"custom/separator#line",  
+    "memory",
+	"custom/separator#line",  
+	"group/audio",
+	"custom/separator#line", 
+	"group/status",
+	],
+}

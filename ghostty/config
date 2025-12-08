@@ -1,0 +1,5 @@
+theme = Django Reborn Again 
+font-family = JetBrainsMono Nerd Font
+background-opacity = 0.9
+keybind = performable:ctrl+c=copy_to_clipboard
+custom-shader = ./cursor_smear.glsl 

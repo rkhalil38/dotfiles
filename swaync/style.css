@@ -1,0 +1,47 @@
+@import "./colors.css";
+
+.control-center {
+  border-radius: 10px;
+  border: 0.5px solid white; 
+  background-color: @inverse_primary; 
+  padding: 10px;
+}
+
+.notification-group {
+    background-color: transparent;
+}
+
+.notification-row {
+    background-color: transparent;
+}
+
+.notification {
+    background-color: @inverse_primary;
+    border: 0.5px solid @primary;
+    box-shadow: none;
+    padding: 4px;
+}
+
+.notification-default-action:hover {
+    background-color: @on_primary;
+}
+
+/* Mpris widget */
+
+.widget-mpris {
+  background-color: transparent;
+  border-radius: 1.159rem;
+}
+
+.widget-mpris-player {
+  border-radius: 1.159rem;
+}
+
+.widget-mpris-title {
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+.widget-mpris-subtitle {
+  font-size: 1.1rem;
+}

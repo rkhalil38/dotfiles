@@ -1,0 +1,10 @@
+configuration {
+  modes: [ window, drun, run ];
+  kb-accept-entry: "Return";
+  kb-cancel: "Control+q,Escape";
+  kb-remove-to-eol: "";
+  kb-element-next: "Control+j";
+  kb-element-prev: "Control+k";
+}
+
+@theme "rounded-romulus.rasi"
