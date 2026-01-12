@@ -3,7 +3,7 @@
 @import "../colors.rasi"
 
 * {
-    font:   "Inter 12";
+    font:   "Jetbrains Mono Nerd Font 12";
 
     background-color:   transparent;
     text-color:         white;
