@@ -189,7 +189,8 @@
 	"exec": "checkupdates | wc -l",
 	"exec-if": "[[ $(checkupdates | wc -l) ]]",
 	"interval": 43200, // (Arch Linux will try to check 12 hrs interval only
-	"on-click": "dnf update",
+	"on-click": "pacman -Syu",
+    "on-click-right": "checkupdates | wc -l",
 	"tooltip": true,
 	"tooltip-format": "Left Click: Update System\nArch (w/ notification)\nFedora, OpenSuse, Debian/Ubuntu click to update",
 },

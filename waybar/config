@@ -46,6 +46,8 @@
 	"custom/separator#line",  
 	"group/audio",
 	"custom/separator#line", 
+    "custom/updater",
+	"custom/separator#line", 
 	"group/status",
 	],
 }
