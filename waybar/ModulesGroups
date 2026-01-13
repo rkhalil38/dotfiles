@@ -87,6 +87,7 @@
         },
 	"modules": [
 		"custom/power",
+        "custom/quit",
 		"custom/lock",
 	]
 },

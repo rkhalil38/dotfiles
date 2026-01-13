@@ -142,9 +142,9 @@
 "custom/power": {
 	"format": "⏻ ",
 	"on-click": "poweroff",
-	"on-click-right": "hyprctl dispatch exit",
+	"on-click-right": "systemctl suspend",
 	"tooltip": true,
-	"tooltip-format": "Left Click: Power Off\nRight Click: Logout",
+	"tooltip-format": "Left Click: Power Off\nRight Click: Suspend",
 },
 
 "custom/reboot": {
