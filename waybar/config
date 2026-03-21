@@ -27,7 +27,7 @@
 "modules-center": [
 	"group/app_drawer",
 	"custom/separator#line",
-	"hyprland/workspaces#rw",
+	"niri/workspaces",
 	"clock",
 	"custom/separator#line",
 	"idle_inhibitor",	
