@@ -1,4 +1,4 @@
-theme = Django Reborn Again 
+theme = Aura
 font-family = JetBrainsMono Nerd Font
 background-opacity = 0.9
 keybind = performable:ctrl+c=copy_to_clipboard

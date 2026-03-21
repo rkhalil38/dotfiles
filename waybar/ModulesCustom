@@ -192,7 +192,7 @@
 	"on-click": "pacman -Syu",
     "on-click-right": "checkupdates | wc -l",
 	"tooltip": true,
-	"tooltip-format": "Left Click: Update System\nArch (w/ notification)\nFedora, OpenSuse, Debian/Ubuntu click to update",
+	"tooltip-format": "Left Click: Update System\n",
 },
 // Separators
 "custom/separator#dot": {
