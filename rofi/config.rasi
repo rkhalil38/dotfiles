@@ -1,5 +1,5 @@
 configuration {
-  modes: [ window, drun, run ];
+  modes: [ window, drun, run, combi ];
   kb-accept-entry: "Return";
   kb-cancel: "Control+q,Escape";
   kb-remove-to-eol: "";
