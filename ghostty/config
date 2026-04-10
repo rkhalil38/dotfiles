@@ -1,5 +1,5 @@
 theme = Aura
-font-family = JetBrainsMono Nerd Font
+font-family = TX-02
 background-opacity = 0.9
 keybind = performable:ctrl+c=copy_to_clipboard
 custom-shader = ./cursor_smear.glsl 
