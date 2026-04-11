@@ -8,7 +8,13 @@
 {
    "custom/fedoricon": {
         "format": "  ",
-        "on-click": "rofi -show drun -show-icons",
+        "on-click": "rofi -show drun -show-icons -icon-theme 'kora'",
+        "tooltip": "true",
+        "tooltip-format": "Application Launcher"
+   },
+   "custom/archicon": {
+        "format": " 󰣇 ",
+        "on-click": "rofi -show drun -show-icons -icon-theme 'kora'",
         "tooltip": "true",
         "tooltip-format": "Application Launcher"
    } 
