@@ -20,7 +20,7 @@
 
 "modules-left": [
     "custom/fedoricon",
-	"hyprland/window",
+	"niri/window",
     "custom/cava_mviz",
 	],
 
