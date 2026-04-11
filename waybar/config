@@ -19,7 +19,7 @@
 "margin-right": 8,
 
 "modules-left": [
-    "custom/fedoricon",
+    "custom/archicon",
 	"hyprland/window",
     "custom/cava_mviz",
 	],
