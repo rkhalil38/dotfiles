@@ -26,7 +26,7 @@
 
 "custom/file_manager": {
 	"format": " ",
-	"on-click": "dolphin",
+	"on-click": "thunar",
 	"tooltip": true,
 	"tooltip-format": "File Manager",
 },
