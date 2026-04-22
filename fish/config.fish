@@ -3,3 +3,6 @@ if status is-interactive
     fastfetch
 end
 set -g fish_greeting ""
+set -gx EDITOR nvim
+set -gx VISUAL nvim
+set -gx TERMINAL ghostty
