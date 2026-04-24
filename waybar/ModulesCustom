@@ -125,6 +125,12 @@
 	"format": "{}"
 },
 
+"custom/nvidia-gpu": {
+    "exec": "nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits",
+    "interval": 2,
+    "format": "{}% 󰢮"
+},
+
 "custom/playerctl": {
 	"format": "<span>{}</span>",
 	"return-type": "json",

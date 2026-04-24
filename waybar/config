@@ -39,6 +39,8 @@
 	"custom/separator#line",  
 	"cpu",
 	"custom/separator#line",  
+    "custom/nvidia-gpu",
+	"custom/separator#line",
     "memory",
 	"custom/separator#line",  
 	"group/audio",
