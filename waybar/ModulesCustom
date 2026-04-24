@@ -128,7 +128,9 @@
 "custom/nvidia-gpu": {
     "exec": "nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits",
     "interval": 2,
-    "format": "{}% 󰢮"
+    "format": "{}% 󰢮",
+	"min-length": 6,
+    "on-click": "ghostty -e nvtop"
 },
 
 "custom/playerctl": {
@@ -146,7 +148,7 @@
 },
     
 "custom/power": {
-	"format": "⏻ ",
+	"format": "⏻",
 	"on-click": "poweroff",
 	"on-click-right": "systemctl suspend",
 	"tooltip": true,
