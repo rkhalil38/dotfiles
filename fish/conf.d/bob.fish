@@ -1,1 +1,1 @@
-source "/home/romulus/.local/share/bob/env/env.fish"
+source "/Users/romuluskhalil/.local/share/bob/env/env.fish"
