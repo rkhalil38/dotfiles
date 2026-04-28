@@ -35,3 +35,8 @@ output_path = '~/.config/rofi/colors.rasi'
 input_path = './templates/colors.css'
 output_path = '~/.config/swaync/colors.css'
 post_hook = 'pkill swaync && swaync &'
+
+[templates.lua]
+input_path = './templates/template.lua'
+output_path = '~/.config/hypr/lua/colors.lua'
+post_hook = 'hyprctl reload'
