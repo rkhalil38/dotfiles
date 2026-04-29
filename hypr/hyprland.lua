@@ -1,4 +1,1 @@
---------------------
------ MONITORS -----
---------------------
-require("lua.monitors")
+require("lua")
