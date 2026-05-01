@@ -1,10 +1,21 @@
 configuration {
-  modes: [ window, drun, run, combi ];
+  modes: [ drun,run,filebrowser,window ];
+  show-icons: true;
   kb-accept-entry: "Return";
+  kb-remove-char-back: "BackSpace,Shift+BackSpace";
   kb-cancel: "Control+q,Escape";
   kb-remove-to-eol: "";
   kb-element-next: "Control+j";
   kb-element-prev: "Control+k";
+  kb-mode-next: "Control+l";
+  kb-mode-previous: "Control+h";
+  kb-mode-complete: "";
+  display-drun:               " Apps";
+  display-run:                " Run";
+  display-filebrowser:        " Files";
+  display-window:             " Windows";
+  drun-display-format:        "{name}";
+  window-format:              "{w} · {c} · {t}";
 }
 
-@theme "rounded-romulus.rasi"
+@theme "rounded-fullmenu.rasi"
