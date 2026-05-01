@@ -14,9 +14,6 @@
 "spacing": 3,
 "fixed-center": true,
 "ipc": true,
-"margin-top": 12,
-"margin-left": 8,
-"margin-right": 8,
 
 "modules-left": [
     "custom/archicon",
@@ -42,6 +39,8 @@
 	"custom/separator#line",  
 	"cpu",
 	"custom/separator#line",  
+    "custom/nvidia-gpu",
+	"custom/separator#line",
     "memory",
 	"custom/separator#line",  
 	"group/audio",

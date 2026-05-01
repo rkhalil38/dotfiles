@@ -26,7 +26,7 @@
 
 "custom/file_manager": {
 	"format": " ",
-	"on-click": "dolphin",
+	"on-click": "thunar",
 	"tooltip": true,
 	"tooltip-format": "File Manager",
 },
@@ -125,6 +125,14 @@
 	"format": "{}"
 },
 
+"custom/nvidia-gpu": {
+    "exec": "nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits",
+    "interval": 2,
+    "format": "{}% 󰢮",
+	"min-length": 6,
+    "on-click": "ghostty -e nvtop"
+},
+
 "custom/playerctl": {
 	"format": "<span>{}</span>",
 	"return-type": "json",
@@ -140,7 +148,7 @@
 },
     
 "custom/power": {
-	"format": "⏻ ",
+	"format": "⏻",
 	"on-click": "poweroff",
 	"on-click-right": "systemctl suspend",
 	"tooltip": true,

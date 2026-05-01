@@ -22,7 +22,7 @@ window {
     border-color:   @primary;
     border:         1px;
 
-    background-color:   @inverse-primary;
+    background-color: @inverse-primary;
 }
 
 mainbox {
