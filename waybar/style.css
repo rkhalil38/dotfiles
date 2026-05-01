@@ -1,6 +1,7 @@
 @import './colors.css';
 
 * {
+all: unset;
 font-family: "JetBrainsMono Nerd Font";
 font-weight: bold;
 min-height: 0;
@@ -36,8 +37,8 @@ tooltip label {
 .modules-left,
 .modules-center,
 .modules-right {
-	padding-top: 2px;
-	padding-bottom: 2px;
+	padding-top: 6px;
+	padding-bottom: 6px;
     padding-right: 4px;
     padding-left: 4px;
 }
@@ -52,9 +53,10 @@ tooltip label {
 
 #workspaces button {
     color: white;
+    transition: none;
     box-shadow: none;
 	text-shadow: none;
-    padding: 4px 8px 4px 8px;
+    padding: 0px 8px 0px 8px;
     border-radius: 9px;
 }
 
@@ -75,9 +77,7 @@ tooltip label {
 #taskbar button:hover,
 #workspaces button:hover {
     color: @primary;
-    border-radius: 15px;
- 	padding-left: 2px;
-    padding-right: 2px;
+    background-color: @on_primary;
 }
 
 #backlight,
