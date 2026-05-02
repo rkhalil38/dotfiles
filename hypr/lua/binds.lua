@@ -8,7 +8,6 @@ hl.bind(globals.main_mod .. " + Q",     hl.dsp.window.close("activewindow"))
 hl.bind(globals.main_mod .. " + F",     hl.dsp.exec_cmd(globals.file_manager))
 hl.bind(globals.main_mod .. " + V",     hl.dsp.window.float({ action = "toggle" }))
 hl.bind("ALT + SPACE",                  hl.dsp.exec_cmd(globals.menu))
-hl.bind(globals.main_mod .. " + SPACE", hl.dsp.exec_cmd(globals.command_menu))
 hl.bind(globals.main_mod .. " + P",     hl.dsp.window.pseudo())
 
 -- Move focus
@@ -76,3 +75,9 @@ hl.bind("XF86AudioNext",  hl.dsp.exec_cmd("playerctl next"),       { locked = tr
 hl.bind("XF86AudioPause", hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
 hl.bind("XF86AudioPlay",  hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
 hl.bind("XF86AudioPrev",  hl.dsp.exec_cmd("playerctl previous"),   { locked = true })
+
+hl.bind(globals.main_mod .. " + Home", function()
+    hl.dispatch(hl.dsp.exec_cmd(globals.browser))
+    hl.dispatch(hl.dsp.exec_cmd(globals.terminal))
+    hl.dispatch(hl.dsp.exec_cmd(globals.terminal))
+end)
