@@ -222,8 +222,8 @@ textbox {
     border:                      0px solid;
     border-radius:               10px;
     border-color:                @outline-variant;
-    background-color:            @surface-container-high;
-    text-color:                  @on-surface;
+    background-color:            transparent;
+    text-color:                  white;
     vertical-align:              0.5;
     horizontal-align:            0.0;
     highlight:                   none;
