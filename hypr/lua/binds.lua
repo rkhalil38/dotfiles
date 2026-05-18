@@ -55,8 +55,8 @@ hl.bind(globals.main_mod .. " + mouse_down", hl.dsp.focus({ workspace = "e+1" })
 hl.bind(globals.main_mod .. " + mouse_up",   hl.dsp.focus({ workspace = "e-1" }))
 
 -- Screenshot utility
-hl.bind("CTRL + SHIFT + P", hl.dsp.exec_cmd(globals.screenshot_clipboard))
-hl.bind("CTRL + SHIFT + O", hl.dsp.exec_cmd(globals.screenshot_downloads))
+hl.bind("CTRL + SHIFT + P", hl.dsp.exec_cmd(globals.screenshot.clipboard))
+hl.bind("CTRL + SHIFT + O", hl.dsp.exec_cmd(globals.screenshot.downloads))
 
 -- Mouse binds
 hl.bind(globals.main_mod .. " + mouse:272", hl.dsp.window.drag(),   { mouse = true })
