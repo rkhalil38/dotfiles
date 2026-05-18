@@ -4,9 +4,9 @@
 hl.window_rule({
     name = "windowrule-1",
     match = {
-        class = ".*"
+        class = ".*",
     },
-    suppress_event = "maximize"
+    suppress_event = "maximize",
 })
 
 hl.window_rule({
@@ -18,6 +18,6 @@ hl.window_rule({
         xwayland = true,
         float = true,
         fullscreen = false,
-        pin = false
-    }
+        pin = false,
+    },
 })

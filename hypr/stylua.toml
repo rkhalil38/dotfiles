@@ -1,0 +1,16 @@
+# stylua.toml
+
+# Use spaces for indentation
+indent_type = "Spaces"
+
+# Number of spaces per indent
+indent_width = 4
+
+# Maximum line width before wrapping
+column_width = 120
+
+# Use Unix line endings
+line_endings = "Unix"
+
+# Align table keys vertically (optional, stylistic)
+quote_style = "AutoPreferDouble"
