@@ -16,8 +16,7 @@ local monitors = {
         position = "0x0",
         scale = 1.5,
         bitdepth = 10,
-    }
-
+    },
 }
 
 mon.register(monitors)

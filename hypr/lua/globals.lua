@@ -1,6 +1,25 @@
 --------------------
 ----- GLOBALS ------
 --------------------
+
+--- Screenshot Applications.
+--- @class Globals.Screenshot
+--- @field clipboard string
+--- @field downloads string
+
+--- Cursor Specs.
+--- @class Globals.CursorSpec
+--- @field theme string
+--- @field size number
+
+--- @class Globals
+--- @field terminal string
+--- @field browser string
+--- @field file_manager string
+--- @field menu string
+--- @field screenshot Globals.Screenshot
+--- @field cursor Globals.CursorSpec
+--- @field nvidia boolean
 local M = {}
 
 -- Applications
@@ -20,6 +39,10 @@ M.cursor = {
 }
 
 -- Keys
-M.main_mod = "SUPER"
+M.leader = "SUPER"
 
+-- System Settings
+M.nvidia = true
+
+--- @type Globals
 return M

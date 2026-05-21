@@ -59,7 +59,7 @@ M.bind_leader = function(keys, cb, opts)
     keys = normalize_keys(keys)
 
     for _, seq in ipairs(keys) do
-        hl.bind(kstr_with_prefix(seq, g.main_mod), cb, opts)
+        hl.bind(kstr_with_prefix(seq, g.leader), cb, opts)
     end
 end
 
