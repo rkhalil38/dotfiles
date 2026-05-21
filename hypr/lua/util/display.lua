@@ -1,3 +1,4 @@
+--- Utilities for registering/configuring monitors in Hyprland.
 --- @class MonitorUtil
 local M = {}
 

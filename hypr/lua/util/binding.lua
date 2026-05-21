@@ -7,6 +7,7 @@ local g = require("lua.globals")
 --- @field cb fun(...)
 --- @field opts? HL.BindOptions
 
+--- Utilities for creating binds in Hyprland.
 --- @class BindUtil
 local M = {}
 
