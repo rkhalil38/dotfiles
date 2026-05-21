@@ -1,4 +1,4 @@
-local globals = require("lua.globals")
+local g = require("lua.globals")
 local key = require("lua.util.binding")
 
 --------------------
@@ -7,9 +7,9 @@ local key = require("lua.util.binding")
 
 --- @type KeyBind[]
 local leader_binds = {
-    { keys = "X", cb = hl.dsp.exec_cmd(globals.terminal) },
+    { keys = "X", cb = hl.dsp.exec_cmd(g.terminal) },
     { keys = "Q", cb = hl.dsp.window.close("activewindow") },
-    { keys = "F", cb = hl.dsp.exec_cmd(globals.file_manager) },
+    { keys = "F", cb = hl.dsp.exec_cmd(g.file_manager) },
     { keys = "V", cb = hl.dsp.window.float({ action = "toggle" }) },
     { keys = "P", cb = hl.dsp.window.pseudo() },
 
@@ -65,9 +65,9 @@ local leader_binds = {
     {
         keys = "Home",
         cb = function()
-            hl.dispatch(hl.dsp.exec_cmd(globals.browser))
-            hl.dispatch(hl.dsp.exec_cmd(globals.terminal))
-            hl.dispatch(hl.dsp.exec_cmd(globals.terminal))
+            hl.dispatch(hl.dsp.exec_cmd(g.browser))
+            hl.dispatch(hl.dsp.exec_cmd(g.terminal))
+            hl.dispatch(hl.dsp.exec_cmd(g.terminal))
         end,
     },
 }
@@ -76,11 +76,11 @@ local leader_binds = {
 local binds = {
 
     -- App Launcher
-    { keys = { "ALT", "SPACE" }, cb = hl.dsp.exec_cmd(globals.menu) },
+    { keys = { "ALT", "SPACE" }, cb = hl.dsp.exec_cmd(g.menu) },
 
     -- Screenshot utility
-    { keys = { "CTRL", "SHIFT", "P" }, cb = hl.dsp.exec_cmd(globals.screenshot.clipboard) },
-    { keys = { "CTRL", "SHIFT", "O" }, cb = hl.dsp.exec_cmd(globals.screenshot.downloads) },
+    { keys = { "CTRL", "SHIFT", "P" }, cb = hl.dsp.exec_cmd(g.screenshot.clipboard) },
+    { keys = { "CTRL", "SHIFT", "O" }, cb = hl.dsp.exec_cmd(g.screenshot.downloads) },
 
     -- Media keys
     {

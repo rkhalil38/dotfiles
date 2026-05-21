@@ -1,7 +1,12 @@
+--- Opts for EnvVar
+--- @class EnvVar.Opt
+--- @field conditional boolean|fun(...): boolean condition for var to be set on
+
 --- Class representing an Env variable.
 --- @class EnvVar
 --- @field name string
 --- @field val string|number
+--- @field opts? EnvVar.Opt
 
 --- Utility for configuring Hyprland environment variables.
 --- @class EnvUtil
