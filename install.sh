@@ -23,6 +23,12 @@ depends=(
    fastfetch
    rofi
    bob
+   cava
+   thunar
+   firefox
+   blueman
+   nvtop
+   pavucontrol
 )
 
 # ============================
