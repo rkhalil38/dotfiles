@@ -41,13 +41,11 @@ M.cursor = {
 
 -- Autostart
 M.autostart = {
-    "awww-daemon",
+    "hyprpaper",
     "waybar",
     "cliphist",
     "hypridle",
     "swaync",
-    "steam",
-    "openrgb -p 'romulus.orp'",
     "systemctl --user enable opentabletdriver.service --now",
     "systemctl --user start hyprpolkitagent",
     "kdeconnectd",

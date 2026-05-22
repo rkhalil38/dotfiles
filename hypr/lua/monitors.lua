@@ -7,16 +7,16 @@ local mon = require("lua.util.display")
 --- @type HL.MonitorSpec[]
 local monitors = {
     {
-        output = "desc:Microstep MSI MAG 275QF CE2M144701107",
-        mode = "2560x1440@180",
-        position = "2560x0",
-        scale = 1,
-    },
-    {
-        output = "desc:Samsung Electric Company SAMSUNG",
-        mode = "3840x2160@60",
+        output = "desc:Samsung Electric Company Odyssey G70F HNBYA00241",
+        mode = "3840x2160@180",
         position = "0x0",
         scale = 1.5,
+    },
+    {
+        output = "desc:Microstep MAG 271QPX E2",
+        mode = "2560x1440@240",
+        position = "2560x0",
+        scale = 1,
         bitdepth = 10,
     },
 }
