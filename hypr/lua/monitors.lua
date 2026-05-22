@@ -3,6 +3,8 @@ local mon = require("lua.util.display")
 --------------------
 ----- MONITORS -----
 --------------------
+
+--- @type HL.MonitorSpec[]
 local monitors = {
     {
         output = "desc:Microstep MSI MAG 275QF CE2M144701107",
