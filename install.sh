@@ -22,6 +22,7 @@ depends=(
    ghostty
    fastfetch
    rofi
+   bob
 )
 
 # ============================
