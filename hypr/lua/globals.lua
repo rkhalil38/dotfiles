@@ -19,6 +19,7 @@
 --- @field menu string
 --- @field screenshot Globals.Screenshot
 --- @field cursor Globals.CursorSpec
+--- @field autostart string[]
 --- @field nvidia boolean
 local M = {}
 
@@ -36,6 +37,20 @@ M.screenshot = {
 M.cursor = {
     theme = "volantes_cursors",
     size = 24,
+}
+
+-- Autostart
+M.autostart = {
+    "awww-daemon",
+    "waybar",
+    "cliphist",
+    "hypridle",
+    "swaync",
+    "steam",
+    "openrgb -p 'romulus.orp'",
+    "systemctl --user enable opentabletdriver.service --now",
+    "systemctl --user start hyprpolkitagent",
+    "kdeconnectd",
 }
 
 -- Keys
