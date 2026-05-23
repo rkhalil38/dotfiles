@@ -59,19 +59,21 @@ dec_volume() {
 
 # Toggle Mute
 toggle_mute() {
+    wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
     if wpctl get-volume @DEFAULT_AUDIO_SINK@ | grep -q '\[MUTED\]'; then
-        wpctl set-mute @DEFAULT_AUDIO_SINK@ 0 && notify-send -e -u low -h boolean:SWAYNC_BYPASS_DND:true -i "$(get_icon)" " Volume:" " Switched ON"
+        notify-send -e -u low -h boolean:SWAYNC_BYPASS_DND:true -i "$iDIR/volume-mute.png" " Mute"
     else
-        wpctl set-mute @DEFAULT_AUDIO_SINK@ 1 && notify-send -e -u low -h boolean:SWAYNC_BYPASS_DND:true -i "$iDIR/volume-mute.png" " Mute"
+        notify-send -e -u low -h boolean:SWAYNC_BYPASS_DND:true -i "$(get_icon)" " Volume:" " Switched ON"
     fi
 }
 
 # Toggle Mic
 toggle_mic() {
+    wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle
     if wpctl get-volume @DEFAULT_AUDIO_SOURCE@ | grep -q '\[MUTED\]'; then
-        wpctl set-mute @DEFAULT_AUDIO_SOURCE@ 0 && notify-send -e -u low -h boolean:SWAYNC_BYPASS_DND:true -i "$iDIR/microphone.png" " Microphone:" " Switched ON"
+        notify-send -e -u low -h boolean:SWAYNC_BYPASS_DND:true -i "$iDIR/microphone-mute.png" " Microphone:" " Switched OFF"
     else
-        wpctl set-mute @DEFAULT_AUDIO_SOURCE@ 1 && notify-send -e -u low -h boolean:SWAYNC_BYPASS_DND:true -i "$iDIR/microphone-mute.png" " Microphone:" " Switched OFF"
+        notify-send -e -u low -h boolean:SWAYNC_BYPASS_DND:true -i "$iDIR/microphone.png" " Microphone:" " Switched ON"
     fi
 }
 
