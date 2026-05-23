@@ -149,24 +149,31 @@
     
 "custom/power": {
 	"format": "⏻",
-	"on-click": "poweroff",
-	"on-click-right": "systemctl suspend",
+	"on-click": "hyprshutdown && poweroff",
+    "on-click-right": "hyprshutdown && systemctl reboot",
 	"tooltip": true,
-	"tooltip-format": "Left Click: Power Off\nRight Click: Suspend",
+	"tooltip-format": "Left Click: Power Off",
 },
 
 "custom/reboot": {
     "format": "󰜉",
-    "on-click": "systemctl reboot",
+    "on-click": "hyprshutdown && systemctl reboot",
     "tooltip": true,
 	"tooltip-format": "Left Click: Reboot",
 },
     
 "custom/quit": {
     "format": "󰗼",
-    "on-click": "hyprctl dispatch 'hl.dsp.exit()'",
+    "on-click": "hyprshutdown",
     "tooltip": true,
 	"tooltip-format": "Left Click: Exit Hyprland",
+},
+
+"custom/sleep": {
+    "format": " 󰒲 ",
+    "on-click": "systemctl suspend",
+    "tooltip": true,
+	"tooltip-format": "Left Click: Sleep",
 },
 
 "custom/swaync": {
