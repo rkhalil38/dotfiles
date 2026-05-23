@@ -9,6 +9,7 @@ depends=(
    hyprpolkitagent
    hyprcursor
    hyprshutdown
+   xdg-desktop-portal-hyprland
    kdeconnect
    opentabletdriver
    cliphist
