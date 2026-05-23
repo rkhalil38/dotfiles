@@ -67,64 +67,69 @@ install_depends() {
 # ============================
 # Dotfile Symlinking
 # ============================
-CONFIG_DIR="$HOME/.config"
-declare -a to_remove=()
+install_dotfiles() {
+    local CONFIG_DIR="$HOME/.config"
+    local to_remove=()
+    local apps=()
 
-install_depends
-
-echo
-echo "Scanning for existing configs that would be overwritten...\n"
-echo
-
-for app in *; do
-    [[ "$app" == "install.sh" ]] && continue
-
-    target="$CONFIG_DIR/$app"
-
-    if [[ -e "$target" ]]; then
-        to_remove+=("$target")
+    # Build the list of apps to install
+    if [[ ${#only_install[@]} -gt 0 ]]; then
+        for app in "${only_install[@]}"; do
+            if [[ ! -d "$app" ]]; then
+                echo "Warning: '$app' is not a directory in $(pwd), skipping." >&2
+                continue
+            fi
+            apps+=("$app")
+        done
+    else
+        for app in *; do
+            [[ "$app" == "install.sh" ]] && continue
+            [[ -d "$app" ]] && apps+=("$app")
+        done
     fi
-done
 
-if [[ ${#to_remove[@]} -gt 0 ]]; then
-    echo "⚠️  WARNING: The following existing files/directories will be PERMANENTLY REMOVED:"
+    echo "Scanning for existing configs that would be overwritten..."
     echo
 
-    for item in "${to_remove[@]}"; do
-        if [[ -d "$item" ]]; then
-            echo "  [ DIR ] $item"
-        else
-            echo "  [ FILE ] $item"
+    for app in "${apps[@]}"; do
+        target="$CONFIG_DIR/$app"
+        if [[ -e "$target" ]]; then
+            to_remove+=("$target")
         fi
     done
 
-    echo
-    echo "This will delete the above items and replace them with symlinks."
-    echo "This operation is destructive and cannot be undone."
-    echo
-
-    read -rp "Do you want to continue? (y/N): " confirm
-
-    if [[ "$confirm" != "y" ]]; then
-        echo "Aborted."
-        exit 1
+    if [[ ${#to_remove[@]} -gt 0 ]]; then
+        echo "⚠️  WARNING: The following existing files/directories will be PERMANENTLY REMOVED:"
+        echo
+        for item in "${to_remove[@]}"; do
+            if [[ -d "$item" ]]; then
+                echo "  [ DIR ] $item"
+            else
+                echo "  [ FILE ] $item"
+            fi
+        done
+        echo
+        echo "This will delete the above items and replace them with symlinks."
+        echo "This operation is destructive and cannot be undone."
+        echo
+        read -rp "Do you want to continue? (y/N): " confirm
+        if [[ "$confirm" != "y" ]]; then
+            echo "Aborted."
+            exit 1
+        fi
+    else
+        echo "No existing configs found. Proceeding safely..."
     fi
-else
-    echo "No existing configs found. Proceeding safely..."
-fi
 
-echo
+    echo
 
-for app in *; do
-    [[ "$app" == "install.sh" ]] && continue
-
-    target="$CONFIG_DIR/$app"
-
-    [[ -e "$target" ]] && rm -rf -- "$target"
-
-    echo "Symlinking $(pwd)/$app -> $target"
-    cp -rs -- "$(pwd)/$app" "$target"
-done
+    for app in "${apps[@]}"; do
+        target="$CONFIG_DIR/$app"
+        [[ -e "$target" ]] && rm -rf -- "$target"
+        echo "Symlinking $(pwd)/$app -> $target"
+        cp -rs -- "$(pwd)/$app" "$target"
+    done
+}
 
 # ============================
 # Post-Install Hooks
@@ -154,7 +159,7 @@ post_install() {
 
     # reload hyprland
     if [[ -z "$HYPRLAND_INSTANCE_SIGNATURE" ]]; then
-        echo "  [SKIP] Not running inside Hyprland, skipping hyprctl reload."
+        echo "  [ SKIP ] Not running inside Hyprland, skipping hyprctl reload."
     else
         echo "  [....] Reloading Hyprland config..."
         hyprctl reload
@@ -162,4 +167,40 @@ post_install() {
     fi
 }
 
+# ============================
+# Argument Parsing
+# ============================
+no_install_deps=false
+only_install=()
+
+while [[ $# -gt 0 ]]; do
+    case "$1" in
+        --no-install-deps)
+            no_install_deps=true
+            shift
+            ;;
+        --only-install)
+            shift
+            while [[ $# -gt 0 && "$1" != --* ]]; do
+                only_install+=("$1")
+                shift
+            done
+            if [[ ${#only_install[@]} -eq 0 ]]; then
+                echo "Error: --only-install requires at least one directory." >&2
+                exit 1
+            fi
+            ;;
+        *)
+            echo "Unknown option: $1" >&2
+            echo "Usage: install.sh [--no-install-deps] [--only-install dir1 dir2 ...]" >&2
+            exit 1
+            ;;
+    esac
+done
+
+# ============================
+# Script
+# ============================
+[[ "$no_install_deps" == false ]] && install_depends
+install_dotfiles
 post_install
