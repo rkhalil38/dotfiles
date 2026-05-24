@@ -10,6 +10,11 @@ depends=(
    hyprcursor
    hyprshutdown
    xdg-desktop-portal-hyprland
+   pipewire
+   wireplumber
+   pipewire-pulse
+   pipewire-alsa
+   pipewire-jack
    kdeconnect
    opentabletdriver
    cliphist
