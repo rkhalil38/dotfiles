@@ -15,6 +15,7 @@ depends=(
    pipewire-pulse
    pipewire-alsa
    pipewire-jack
+   brightnessctl
    kdeconnect
    opentabletdriver
    cliphist
