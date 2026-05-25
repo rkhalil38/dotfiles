@@ -16,6 +16,7 @@ depends=(
    pipewire-alsa
    pipewire-jack
    brightnessctl
+   networkmanager
    kdeconnect
    opentabletdriver
    cliphist
