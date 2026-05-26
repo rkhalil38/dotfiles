@@ -9,6 +9,7 @@ depends=(
    hyprpolkitagent
    hyprcursor
    hyprshutdown
+   hyprshot
    xdg-desktop-portal-hyprland
    pipewire
    wireplumber
