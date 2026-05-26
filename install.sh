@@ -16,6 +16,7 @@ depends=(
    pipewire-pulse
    pipewire-alsa
    pipewire-jack
+   playerctl
    brightnessctl
    networkmanager
    kdeconnect
