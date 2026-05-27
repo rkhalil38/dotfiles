@@ -11,6 +11,7 @@ depends=(
    hyprshutdown
    hyprshot
    xdg-desktop-portal-hyprland
+   pacman-contrib
    pipewire
    wireplumber
    pipewire-pulse
