@@ -13,6 +13,7 @@ local binds = {
     { keys = "F", cb = hl.dsp.exec_cmd(g.file_manager), opts = { leader = true } },
     { keys = "V", cb = hl.dsp.window.float({ action = "toggle" }), opts = { leader = true } },
     { keys = "P", cb = hl.dsp.window.pseudo(), opts = { leader = true } },
+    { keys = "M", cb = hl.dsp.window.fullscreen(), opts = { leader = true } },
 
     -- Move focus
     { keys = "H", cb = hl.dsp.focus({ direction = "l" }), opts = { leader = true } },
